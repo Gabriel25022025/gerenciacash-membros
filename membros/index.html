@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulos do Curso - GerenciaCash</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css"> {# Ajustado: style.css está na raiz do repositório #}
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="../" class="logo">GerenciaCash</a> {# Link para a raiz do repositório (onde está login.html) #}
+            <div style="display: flex; align-items: center;">
+                <div class="xp-rank-header">
+                    <div class="rank-icon"><i class="fas fa-bullseye"></i></div>
+                    <div class="xp-details">
+                        <p class="rank-name">Estrategista de Metas</p>
+                        <div class="header-xp-bar-container"><div class="header-xp-bar-fill" style="width: 25%;"></div></div>
+                        <p class="rank-points-text">1850 / 2000 CP</p>
+                    </div>
+                </div>
+                <div class="user-menu" id="user-menu">
+                    <div class="user-menu-toggle">
+                        <div class="profile-picture-header">
+                            <img src="https://via.placeholder.com/30/cccccc/333333?Text=GC" alt="Foto de Perfil" id="header-profile-picture">
+                        </div>
+                        <span>Gabriel</span><i class="fas fa-chevron-down" style="font-size: 12px; margin-left: 5px;"></i>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu">
+                        <div class="dropdown-header">
+                            <div class="profile-picture-dropdown">
+                                <img src="https://via.placeholder.com/80/cccccc/333333?Text=GC" alt="Foto de Perfil" id="dropdown-profile-picture">
+                                <label for="profile-picture-input-header" class="change-picture-label"><i class="fas fa-camera"></i> Alterar Foto</label>
+                                <input type="file" id="profile-picture-input-header" accept="image/png, image/jpeg" style="display: none;">
+                            </div>
+                            <p class="user-name">Gabriel</p>
+                            <p class="user-plan">Plano Diamante 💎</p>
+                        </div>
+                        <a href="minha_conta.html"><i class="fas fa-user-edit"></i> Minha Conta</a> {# Link ajustado #}
+                        <a href="gerir_assinatura.html"><i class="fas fa-credit-card"></i> Gerir Assinatura</a> {# Link ajustado #}
+                        <a href="meu_progresso.html"><i class="fas fa-chart-line"></i> Meu Progresso</a> {# Link ajustado #}
+                        <a href="minhas_conquistas.html"><i class="fas fa-trophy"></i> Minhas Conquistas</a> {# Link ajustado #}
+                        <a href="documentos/guia-de-comandos.pdf" download><i class="fas fa-book"></i> Guia de Comandos</a> {# Link ajustado #}
+                        <div class="dropdown-divider"></div>
+                        <a href="../login.html"><i class="fas fa-sign-out-alt"></i> Sair</a> {# Link ajustado para subir um nível #}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main-membros">
+        <section class="hero-membros-v2">
+    <div class="hero-background"></div>
+    <div class="container hero-content">
+        <div class="hero-text">
+            <h1>Bem-vindo de volta, <span class="gradient-text">Gabriel</span>!</h1>
+            <p class="subtitle" style="text-align: left; margin-left: 0;">Sua jornada para o domínio financeiro continua. Vamos lá!</p>
+            <a href="aulas_prata.html" class="btn btn-principal"><i class="fas fa-play-circle"></i> Continuar de onde parou</a> {# Link ajustado #}
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-value">3</span>
+                <span class="stat-label">Módulos Concluídos</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">1850</span>
+                <span class="stat-label">CashPoints</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Rank Atual</span>
+                <span class="stat-value rank">Planeador de Metas</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section class="modules-section" style="padding-top: 60px;">
+            <div class="container">
+                <div class="modules-grid">
+                    <div class="module-card">
+                        <img class="module-image" src="https://images.unsplash.com/photo-1554224155-8d04421cd6e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZmluYW5jZSwgd2VsY29tZXx8fHx8fDE3MjExODUyNTA&ixlib-rb-4.0.3&q=80&w=1080" alt="Imagem do Módulo de Boas-Vindas">
+                        <div class="module-content">
+                            <span class="module-tag">Comece aqui</span>
+                            <h3>Módulo 1: Boas-Vindas</h3>
+                            <p>Tudo que você precisa saber para configurar sua conta e aproveitar ao máximo o GerenciaCash.</p>
+                            <div class="module-progress">
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar-fill" style="width: 25%;"></div>
+                                </div>
+                                <span>1 de 4 aulas concluídas</span>
+                            </div>
+                            <a href="aulas_boas_vindas.html" class="btn btn-principal">Acessar Módulo</a> {# Link ajustado #}
+                        </div>
+                    </div>
+                </div>
+                <div class="plan-modules-separator">
+                    <h2>Módulos do seu Plano</h2>
+                    <p>Aulas e recursos exclusivos para assinantes.</p>
+                </div>
+                <div class="modules-grid">
+                    <div class="module-card">
+                        <img class="module-image" src="../imagens/BRONZE.jpg" alt="Módulo Plano Bronze"> {# Link da imagem atualizado #}
+                        <div class="module-content">
+                            <span class="module-tag bronze">Plano Bronze 🥉</span>
+                            <h3>Fundamentos do Controle</h3>
+                            <p>Domine os comandos básicos de lançamento, listagem e gestão de saldo.</p>
+                            <div class="module-progress">
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar-fill" style="width: 0%;"></div>
+                                </div>
+                                <span>0 de 3 aulas concluídas</span>
+                            </div>
+                            <a href="aulas_bronze.html" class="btn btn-principal">Acessar Módulo Bronze</a> {# Link ajustado #}
+                        </div>
+                    </div>
+                    <div class="module-card locked">
+                        <div class="module-image-wrapper">
+                            <img class="module-image" src="../imagens/PRATA.jpg" alt="Módulo Plano Prata"> {# Link da imagem atualizado #}
+                            <div class="lock-overlay">
+                                <i class="fas fa-lock"></i>
+                                <span>Conteúdo para assinantes Prata ou superior</span>
+                            </div>
+                        </div>
+                        <div class="module-content">
+                            <span class="module-tag prata">Plano Prata 🥈</span>
+                            <h3>Organização Avançada</h3>
+                            <p>Aprenda a usar categorias, carteiras e a gerenciar seus gastos fixos com eficiência.</p>
+                            <a href="upgrade.html?plano=prata" class="btn btn-principal disabled">Fazer Upgrade</a> {# Link ajustado #}
+                        </div>
+                    </div>
+                    <div class="module-card locked">
+                        <div class="module-image-wrapper">
+                            <img class="module-image" src="../imagens/OURO.jpg" alt="Módulo Plano Ouro"> {# Link da imagem atualizado #}
+                             <div class="lock-overlay">
+                                <i class="fas fa-lock"></i>
+                                <span>Conteúdo para assinantes Ouro ou superior</span>
+                            </div>
+                        </div>
+                        <div class="module-content">
+                            <span class="module-tag ouro">Plano Ouro 🥇</span>
+                            <h3>Otimização e Metas</h3>
+                            <p>Crie orçamentos, receba alertas e defina metas para alcançar seus objetivos financeiros.</p>
+                            <a href="upgrade.html?plano=ouro" class="btn btn-principal disabled">Fazer Upgrade</a> {# Link ajustado #}
+                        </div>
+                    </div>
+                    <div class="module-card locked">
+                        <div class="module-image-wrapper">
+                            <img class="module-image" src="../imagens/DIAMANTE.jpg" alt="Módulo Plano Diamante"> {# Link da imagem atualizado #}
+                             <div class="lock-overlay">
+                                <i class="fas fa-lock"></i>
+                                <span>Conteúdo para assinantes Diamante</span>
+                            </div>
+                        </div>
+                        <div class="module-content">
+                            <span class="module-tag diamante">Plano Diamante 💎</span>
+                            <h3>Automação e Análise</h3>
+                            <p>Explore relatórios automáticos, exportação de dados e insights premium.</p>
+                            <a href="upgrade.html?plano=diamante" class="btn btn-principal disabled">Fazer Upgrade</a> {# Link ajustado #}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="continue-watching-section" id="continue-watching" style="margin-top: 60px;">
+            <div class="container">
+                <div class="continue-watching-card">
+                    <div class="continue-watching-thumbnail">
+                        <img src="../imagens/PRATA.jpg" alt="Thumbnail da última aula assistida"> {# Link da imagem atualizado #}
+                    </div>
+                    <div class="continue-watching-content">
+                        <p class="subtitle-text">Continuar de onde parou</p>
+                        <h3>Módulo Prata: Organizando com Categorias</h3>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill" style="width: 50%;"></div>
+                        </div>
+                        <a href="aulas_prata.html" class="btn btn-principal">Continuar a assistir</a> {# Link ajustado #}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="resource-section" style="padding-top: 60px;">
+            <div class="container">
+                <div class="resource-card">
+                    <i class="fas fa-file-pdf resource-icon"></i>
+                    <div class="resource-content">
+                        <h3>Guia de Comandos Completo</h3>
+                        <p>Baixe o PDF com todos os comandos do bot e tenha sempre à mão.</p>
+                    </div>
+                    <a href="documentos/guia-de-comandos.pdf" class="btn btn-secondary" download> {# Link ajustado #}
+                        <i class="fas fa-download"></i> Baixar Agora
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+             <p>&copy; 2025 GerenciaCash. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const userMenu = document.getElementById('user-menu');
+            const dropdownMenu = document.getElementById('dropdown-menu');
+            const headerProfilePicture = document.getElementById('header-profile-picture');
+            const dropdownProfilePicture = document.getElementById('dropdown-profile-picture');
+            const profilePictureInputHeader = document.getElementById('profile-picture-input-header');
+
+            if (userMenu) {
+                userMenu.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    dropdownMenu.classList.toggle('show');
+                });
+            }
+
+            window.addEventListener('click', function(event) {
+                if (dropdownMenu && dropdownMenu.classList.contains('show')) {
+                    if (!userMenu.contains(event.target)) {
+                        dropdownMenu.classList.remove('show');
+                    }
+                }
+            });
+
+            // Carregar foto de perfil do localStorage ao carregar a página
+            const savedProfilePicture = localStorage.getItem('profilePicture');
+            if (savedProfilePicture) {
+                headerProfilePicture.src = savedProfilePicture;
+                dropdownProfilePicture.src = savedProfilePicture;
+            }
+
+            if (profilePictureInputHeader) {
+                profilePictureInputHeader.addEventListener('change', function(event) {
+                    const file = event.target.files && event.target.files.length > 0 ? event.target.files[0] : null; // Pegar o primeiro arquivo
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            headerProfilePicture.src = e.target.result;
+                            dropdownProfilePicture.src = e.target.result;
+                            localStorage.setItem('profilePicture', e.target.result); // Salvar no localStorage
+                        }
+                        reader.readAsDataURL(file);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

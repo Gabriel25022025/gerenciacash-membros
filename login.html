@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Área de Membros GerenciaCash</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> {# Ajustado para o style.css na raiz deste repositório #}
+</head>
+<body>
+    <div class="container">
+        <div class="login-container">
+            <a href="https://seuusuario.github.io/" class="logo">GerenciaCash</a> {# Link para a página de vendas principal (AJUSTE 'seuusuario.github.io' para a sua URL real) #}
+            <h2>Acesse sua Área de Membros</h2>
+
+            {% if error %}
+                <p class="error-message">{{ error }}</p>
+            {% endif %}
+            
+            <form method="post">
+                <div class="form-group">
+                    <label for="email">Seu E-mail de Acesso</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Sua Senha</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-login">Entrar</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.querySelector('.btn-login').addEventListener('click', function(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+            // Para um protótipo estático, apenas redireciona após um "login" simulado
+            window.location.href = 'membros/'; // Redireciona para a pasta membros
+        });
+    </script>
+</body>
+</html>

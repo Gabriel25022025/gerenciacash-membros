@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Conquistas - GerenciaCash</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css"> {# Caminho ajustado #}
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="../" class="logo">GerenciaCash</a> {# Link ajustado para a raiz do repositório #}
+            <div style="display: flex; align-items: center;">
+                <div class="xp-rank-header">
+                    <div class="rank-icon"><i class="fas fa-bullseye"></i></div>
+                    <div class="xp-details">
+                        <p class="rank-name">Planeador de Metas</p>
+                        <div class="header-xp-bar-container"><div class="header-xp-bar-fill" style="width: 50%;"></div></div>
+                        <p class="rank-points-text">1850 / 2500 CP</p>
+                    </div>
+                </div>
+                <div class="user-menu" id="user-menu">
+                    <div class="user-menu-toggle">
+                        <div class="profile-picture-header">
+                            <img src="https://via.placeholder.com/30/cccccc/333333?Text=GC" alt="Foto de Perfil" id="header-profile-picture">
+                        </div>
+                        <span>Gabriel</span><i class="fas fa-chevron-down" style="font-size: 12px; margin-left: 5px;"></i>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu">
+                        <div class="dropdown-header">
+                            <div class="profile-picture-dropdown">
+                                <img src="https://via.placeholder.com/80/cccccc/333333?Text=GC" alt="Foto de Perfil" id="dropdown-profile-picture">
+                                <label for="profile-picture-input-dropdown" class="change-picture-label"><i class="fas fa-camera"></i> Alterar Foto</label>
+                                <input type="file" id="profile-picture-input-dropdown" accept="image/png, image/jpeg" style="display: none;">
+                            </div>
+                            <p class="user-name">Gabriel</p>
+                            <p class="user-plan">Plano Diamante 💎</p>
+                        </div>
+                        <a href="minha_conta.html"><i class="fas fa-user-edit"></i> Minha Conta</a> {# Link ajustado #}
+                        <a href="gerir_assinatura.html"><i class="fas fa-credit-card"></i> Gerir Assinatura</a> {# Link ajustado #}
+                        <a href="meu_progresso.html"><i class="fas fa-chart-line"></i> Meu Progresso</a> {# Link ajustado #}
+                        <a href="minhas_conquistas.html"><i class="fas fa-trophy"></i> Minhas Conquistas</a> {# Link ajustado #}
+                        <a href="documentos/guia-de-comandos.pdf" download><i class="fas fa-book"></i> Guia de Comandos</a> {# Link ajustado #}
+                        <div class="dropdown-divider"></div>
+                        <a href="../login.html"><i class="fas fa-sign-out-alt"></i> Sair</a> {# Link ajustado para subir um nível #}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-membros">
+        <section class="page-title-section">
+            <div class="container">
+                <h2><i class="fas fa-trophy"></i> Minhas Conquistas</h2>
+                <p class="subtitle">Veja todos os emblemas que você desbloqueou e quantos CashPoints (CP) cada um vale.</p>
+            </div>
+        </section>
+
+        <section class="achievements-section">
+            <div class="container">
+                
+                <div class="achievements-controls">
+                    <div class="filter-buttons">
+                        <button class="active" data-filter="all">Todas</button>
+                        <button data-filter="earned">Concluídas</button>
+                        <button data-filter="locked">Por Fazer</button>
+                    </div>
+                    <div class="sort-options">
+                        <select id="sort-select">
+                            <option value="default">Ordem Padrão</option>
+                            <option value="cp-desc">Mais CashPoints</option>
+                            <option value="cp-asc">Menos CashPoints</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="achievements-grid" id="achievements-grid">
+                    
+                    <div class="achievement-card earned" data-status="earned" data-cp="100">
+                        <div class="achievement-xp-tag">+100 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-rocket"></i></div>
+                        <h3>Iniciado</h3>
+                        <p>Completou o módulo de Boas-Vindas.</p>
+                    </div>
+                    <div class="achievement-card earned" data-status="earned" data-cp="250">
+                        <div class="achievement-xp-tag">+250 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-coins"></i></div>
+                        <h3>Mestre dos Gastos</h3>
+                        <p>Completou o módulo Bronze.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="600">
+                        <div class="achievement-xp-tag">+600 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-sitemap"></i></div>
+                        <h3>Organizador</h3>
+                        <p>Complete o módulo Prata.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="1250">
+                        <div class="achievement-xp-tag">+1250 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-bullseye"></i></div>
+                        <h3>Estrategista</h3>
+                        <p>Complete o módulo Ouro.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="2500">
+                        <div class="achievement-xp-tag">+2500 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-crown"></i></div>
+                        <h3>Mestre das Finanças</h3>
+                        <p>Complete o módulo Diamante.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="20">
+                        <div class="achievement-xp-tag">+20 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-eraser"></i></div>
+                        <h3>Corrigindo a Rota</h3>
+                        <p>Use o comando "desfazer" pela primeira vez.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="50">
+                        <div class="achievement-xp-tag">+50 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-comment-dots"></i></div>
+                        <h3>Participativo</h3>
+                        <p>Deixou o seu primeiro comentário numa aula.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="75">
+                        <div class="achievement-xp-tag">+75 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-search-dollar"></i></div>
+                        <h3>Detetive de Gastos</h3>
+                        <p>Use o comando "pesquisar" pela primeira vez.</p>
+                    </div>
+                    <div class="achievement-card earned" data-status="earned" data-cp="75">
+                        <div class="achievement-xp-tag">+75 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-wallet"></i></div>
+                        <h3>Multi-Contas</h3>
+                        <p>Criou a sua primeira carteira adicional.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="100">
+                        <div class="achievement-xp-tag">+100 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-thumbtack"></i></div>
+                        <h3>Mestre da Recorrência</h3>
+                        <p>Adicionou o seu primeiro gasto fixo.</p>
+                    </div>
+                    <div class="achievement-card earned" data-status="earned" data-cp="100">
+                        <div class="achievement-xp-tag">+100 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-piggy-bank"></i></div>
+                        <h3>Planejador de Sonhos</h3>
+                        <p>Criou a sua primeira meta financeira.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="200">
+                        <div class="achievement-xp-tag">+200 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-receipt"></i></div>
+                        <h3>Sempre Atento</h3>
+                        <p>Registe o seu 50º gasto no bot.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="250">
+                        <div class="achievement-xp-tag">+250 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-calendar-check"></i></div>
+                        <h3>Hábito Criado</h3>
+                        <p>Registe um gasto durante 7 dias seguidos.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="300">
+                        <div class="achievement-xp-tag">+300 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-thumbs-up"></i></div>
+                        <h3>Mão Fechada</h3>
+                        <p>Mantenha-se dentro de um orçamento por um mês.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="400">
+                        <div class="achievement-xp-tag">+400 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                        <h3>Registrador Mestre</h3>
+                        <p>Registe um total de 150 gastos.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="750">
+                        <div class="achievement-xp-tag">+750 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-medal"></i></div>
+                        <h3>Orçamento de Ferro</h3>
+                        <p>Mantenha-se dentro de todos os orçamentos por um mês.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="1000">
+                        <div class="achievement-xp-tag">+1000 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-check-double"></i></div>
+                        <h3>Sonho Realizado!</h3>
+                        <p>Complete 100% de uma meta financeira.</p>
+                    </div>
+                    <div class="achievement-card earned" data-status="earned" data-cp="300">
+                        <div class="achievement-xp-tag">+300 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-user-astronaut"></i></div>
+                        <h3>Explorador Financeiro</h3>
+                        <p>Manteve-se ativo por 1 mês.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="750">
+                        <div class="achievement-xp-tag">+750 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-user-shield"></i></div>
+                        <h3>Guardião das Contas</h3>
+                        <p>Manteve-se ativo por 3 meses.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="1500">
+                        <div class="achievement-xp-tag">+1500 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-user-tie"></i></div>
+                        <h3>Veterano das Finanças</h3>
+                        <p>Manteve-se ativo por 6 meses.</p>
+                    </div>
+                    <div class="achievement-card earned" data-status="earned" data-cp="500">
+                        <div class="achievement-xp-tag">+500 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-handshake"></i></div>
+                        <h3>Voto de Confiança</h3>
+                        <p>Renovou a sua assinatura para um novo ciclo.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="5000">
+                        <div class="achievement-xp-tag">+5000 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-star-of-life"></i></div>
+                        <h3>Lenda Financeira</h3>
+                        <p>Manteve-se ativo por 1 ano completo.</p>
+                    </div>
+                    <div class="achievement-card earned" data-status="earned" data-cp="50">
+                        <div class="achievement-xp-tag">+50 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-sign-in-alt"></i></div>
+                        <h3>Check-in Financeiro</h3>
+                        <p>Acedeu à área de membros por 3 dias seguidos.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="150">
+                        <div class="achievement-xp-tag">+150 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-calendar-check"></i></div>
+                        <h3>Visitante Frequente</h3>
+                        <p>Acedeu à área de membros por 7 dias seguidos.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="500">
+                        <div class="achievement-xp-tag">+500 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-calendar-alt"></i></div>
+                        <h3>Parte da Mobília</h3>
+                        <p>Acedeu à área de membros por 30 dias seguidos.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="200">
+                        <div class="achievement-xp-tag">+200 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-tags"></i></div>
+                        <h3>Organizador de Elite</h3>
+                        <p>Usou 10 categorias diferentes para os seus gastos.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="200">
+                        <div class="achievement-xp-tag">+200 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-archway"></i></div>
+                        <h3>Arquiteto dos Sonhos</h3>
+                        <p>Tem 3 metas financeiras ativas ao mesmo tempo.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="100">
+                        <div class="achievement-xp-tag">+100 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-calendar-week"></i></div>
+                        <h3>Caçador de Dados</h3>
+                        <p>Usou a função "relatorio" com datas personalizadas.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="800">
+                        <div class="achievement-xp-tag">+800 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-robot"></i></div>
+                        <h3>O Bot Já Te Obedece</h3>
+                        <p>Alcançou a marca de 500 gastos registados.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="250">
+                        <div class="achievement-xp-tag">+250 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-piggy-bank"></i></div>
+                        <h3>Primeiro Milhar</h3>
+                        <p>Guardou os seus primeiros R$ 1.000 numa meta.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="600">
+                        <div class="achievement-xp-tag">+600 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-coins"></i></div>
+                        <h3>Poupador Experiente</h3>
+                        <p>Alcançou R$ 5.000 guardados numa meta.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="1200">
+                        <div class="achievement-xp-tag">+1200 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-gem"></i></div>
+                        <h3>Mestre Poupador</h3>
+                        <p>Alcançou a marca de R$ 10.000 guardados.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="400">
+                        <div class="achievement-xp-tag">+400 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Bola de Neve</h3>
+                        <p>Atingiu 25% de uma meta de investimento.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="800">
+                        <div class="achievement-xp-tag">+800 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-mountain"></i></div>
+                        <h3>Avalanche Financeira</h3>
+                        <p>Atingiu 50% de uma meta de investimento.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="300">
+                        <div class="achievement-xp-tag">+300 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-layer-group"></i></div>
+                        <h3>Colecionador de Emblemas</h3>
+                        <p>Desbloqueou 10 outras conquistas.</p>
+                    </div>
+                    <div class="achievement-card" data-status="locked" data-cp="7500">
+                        <div class="achievement-xp-tag">+7500 CP</div>
+                        <div class="achievement-icon"><i class="fas fa-gavel"></i></div>
+                        <h3>Mestre do GerenciaCash</h3>
+                        <p>Desbloqueie todas as outras conquistas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"><div class="container"><p>&copy; 2025 GerenciaCash. Todos os direitos reservados.</p></div></footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Script do menu dropdown
+            const userMenu = document.getElementById('user-menu');
+            const dropdownMenu = document.getElementById('dropdown-menu');
+            const headerProfilePicture = document.getElementById('header-profile-picture');
+            const dropdownProfilePicture = document.getElementById('dropdown-profile-picture');
+            const profilePictureInputDropdown = document.getElementById('profile-picture-input-dropdown'); // Input no dropdown
+
+            if (userMenu) {
+                userMenu.addEventListener('click', function(event) { event.stopPropagation(); dropdownMenu.classList.toggle('show'); });
+            }
+            window.addEventListener('click', function(event) {
+                if (dropdownMenu && dropdownMenu.classList.contains('show')) {
+                    if (!userMenu.contains(event.target)) { dropdownMenu.classList.remove('show'); }
+                }
+            });
+
+            // Carregar foto de perfil do localStorage ao carregar a página
+            const savedProfilePicture = localStorage.getItem('profilePicture');
+            if (savedProfilePicture) {
+                headerProfilePicture.src = savedProfilePicture;
+                dropdownProfilePicture.src = savedProfilePicture;
+            }
+
+            if (profilePictureInputDropdown) {
+                profilePictureInputDropdown.addEventListener('change', function(event) {
+                    const file = event.target.files && event.target.files.length > 0 ? event.target.files[0] : null;
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            headerProfilePicture.src = e.target.result;
+                            dropdownProfilePicture.src = e.target.result;
+                            localStorage.setItem('profilePicture', e.target.result);
+                        }
+                        reader.readAsDataURL(file);
+                    }
+                });
+            }
+
+            // SCRIPT PARA FILTROS E ORDENAÇÃO
+            const filterButtons = document.querySelectorAll('.filter-buttons button');
+            const sortSelect = document.getElementById('sort-select');
+            const achievementsGrid = document.getElementById('achievements-grid');
+            const achievementCards = Array.from(achievementsGrid.querySelectorAll('.achievement-card'));
+
+            function updateDisplay() {
+                const filter = document.querySelector('.filter-buttons button.active').dataset.filter;
+                const sortBy = sortSelect.value;
+
+                let filteredCards = achievementCards.filter(card => {
+                    if (filter === 'all') return true;
+                    return card.dataset.status === filter;
+                });
+
+                filteredCards.sort((a, b) => {
+                    const cpA = parseInt(a.dataset.cp);
+                    const cpB = parseInt(b.dataset.cp);
+                    
+                    if (sortBy === 'cp-desc') {
+                        return cpB - cpA;
+                    } else if (sortBy === 'cp-asc') {
+                        return cpA - cpB;
+                    }
+                    return 0;
+                });
+                
+                if (sortBy === 'default') {
+                    filteredCards.sort((a,b) => {
+                        return achievementCards.indexOf(a) - achievementCards.indexOf(b);
+                    });
+                }
+
+                achievementsGrid.innerHTML = '';
+                filteredCards.forEach(card => {
+                    achievementsGrid.appendChild(card);
+                });
+            }
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    updateDisplay();
+                });
+            });
+
+            sortSelect.addEventListener('change', updateDisplay);
+        });
+    </script>
+</body>
+</html>

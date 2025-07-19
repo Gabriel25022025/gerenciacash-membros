@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo Diamante - GerenciaCash</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css"> {# Caminho ajustado #}
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="../" class="logo">GerenciaCash</a> {# Link ajustado para a raiz do repositório #}
+            <div style="display: flex; align-items: center;">
+                <div class="xp-rank-header">
+                    <div class="rank-icon"><i class="fas fa-bullseye"></i></div>
+                    <div class="xp-details">
+                        <p class="rank-name">Estrategista de Metas</p>
+                        <div class="header-xp-bar-container"><div class="header-xp-bar-fill" style="width: 25%;"></div></div>
+                        <p class="rank-points-text">1850 / 2000 CP</p>
+                    </div>
+                </div>
+                <div class="user-menu" id="user-menu">
+                    <div class="user-menu-toggle">
+                        <div class="profile-picture-header">
+                            <img src="https://via.placeholder.com/30/cccccc/333333?Text=GC" alt="Foto de Perfil" id="header-profile-picture">
+                        </div>
+                        <span>Gabriel</span><i class="fas fa-chevron-down" style="font-size: 12px; margin-left: 5px;"></i>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu">
+                        <div class="dropdown-header">
+                            <div class="profile-picture-dropdown">
+                                <img src="https://via.placeholder.com/80/cccccc/333333?Text=GC" alt="Foto de Perfil" id="dropdown-profile-picture">
+                                <label for="profile-picture-input-dropdown" class="change-picture-label"><i class="fas fa-camera"></i> Alterar Foto</label>
+                                <input type="file" id="profile-picture-input-dropdown" accept="image/png, image/jpeg" style="display: none;">
+                            </div>
+                            <p class="user-name">Gabriel</p>
+                            <p class="user-plan">Plano Diamante 💎</p>
+                        </div>
+                        <a href="minha_conta.html"><i class="fas fa-user-edit"></i> Minha Conta</a> {# Link ajustado #}
+                        <a href="gerir_assinatura.html"><i class="fas fa-credit-card"></i> Gerir Assinatura</a> {# Link ajustado #}
+                        <a href="meu_progresso.html"><i class="fas fa-chart-line"></i> Meu Progresso</a> {# Link ajustado #}
+                        <a href="minhas_conquistas.html"><i class="fas fa-trophy"></i> Minhas Conquistas</a> {# Link ajustado #}
+                        <a href="documentos/guia-de-comandos.pdf" download><i class="fas fa-book"></i> Guia de Comandos</a> {# Link ajustado #}
+                        <div class="dropdown-divider"></div>
+                        <a href="../login.html"><i class="fas fa-sign-out-alt"></i> Sair</a> {# Link ajustado para subir um nível #}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="classroom-main">
+        <div class="classroom-container">
+            <div class="video-player-area">
+                <div class="video-player-wrapper">
+                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/902844811?h=3e7f48a56c" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+                </div>
+                <div class="video-lesson-info">
+                    <span class="module-tag diamante">Plano Diamante 💎</span>
+                    <h2>1. Exportando Seus Dados para o Excel</h2>
+                    <p>Aprenda a usar o comando `exportar` para ter todos os seus dados financeiros em uma planilha, prontos para uma análise profunda.</p>
+                </div>
+                <div class="comments-section">
+                    <h4><i class="fas fa-comments"></i> Comentários</h4>
+                    <form class="comment-form">
+                        <textarea placeholder="Escreva aqui sua dúvida ou comentário..."></textarea>
+                        <button type="submit" class="btn btn-principal">Enviar Comentário</button>
+                    </form>
+                </div>
+                <div class="video-navigation">
+                    <a href="#" class="btn btn-secondary disabled"><i class="fas fa-chevron-left"></i> Aula Anterior</a>
+                    <a href="#" class="btn btn-principal">Próxima Aula <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+            <aside class="lesson-playlist-area">
+                <div class="playlist-header"><h4>Aulas Disponíveis</h4></div>
+                <ul class="lesson-list">
+                    <div class="playlist-subheader">Conteúdo Plano Diamante 💎</div>
+                    <li class="lesson-item active"><i class="fas fa-play-circle status-icon"></i><div class="lesson-details"><span class="lesson-title">1. Exportando Seus Dados para o Excel</span><span class="lesson-duration">7 min</span></div></li>
+                    <li class="lesson-item"><i class="far fa-circle status-icon"></i><div class="lesson-details"><span class="lesson-title">2. Relatórios por Período Customizado</span><span class="lesson-duration">6 min</span></div></li>
+                    <li class="lesson-item"><i class="far fa-circle status-icon"></i><div class="lesson-details"><span class="lesson-title">3. Entendendo os Relatórios Semanais</span><span class="lesson-duration">5 min</span></div></li>
+                    <div class="playlist-subheader">Conteúdo Plano Ouro 🥇</div>
+                    <li class="lesson-item completed"><i class="fas fa-check-circle status-icon"></i><div class="lesson-details"><span class="lesson-title">1. Criando Orçamentos Inteligentes</span><span class="lesson-duration">8 min</span></div></li>
+                    <li class="lesson-item completed"><i class="fas fa-check-circle status-icon"></i><div class="lesson-details"><span class="lesson-title">2. Como Criar e Acompanhar Metas</span><span class="lesson-duration">10 min</span></div></li>
+                    <li class="lesson-item completed"><i class="fas fa-check-circle status-icon"></i><div class="lesson-details"><span class="lesson-title">3. Pesquisa Avançada de Gastos</span><span class="lesson-duration">5 min</span></div></li>
+                    <div class="playlist-subheader">Conteúdo Plano Prata 🥈</div>
+                    <li class="lesson-item completed"><i class="fas fa-check-circle status-icon"></i><div class="lesson-details"><span class="lesson-title">1. Organizando com Categorias e Carteiras</span><span class="lesson-duration">7 min</span></div></li>
+                    <li class="lesson-item completed"><i class="fas fa-check-circle status-icon"></i><div class="lesson-details"><span class="lesson-title">2. Gerenciando seus Gastos Fixos</span><span class="lesson-duration">6 min</span></div></li>
+                    <li class="lesson-item completed"><i class="fas fa-check-circle status-icon"></i><div class="lesson-details"><span class="lesson-title">3. Analisando o Resumo Mensal</span><span class="lesson-duration">5 min</span></div></li>
+                    <div class="playlist-subheader">Conteúdo Plano Bronze 🥉</div>
+                    <li class="lesson-item completed"><i class="fas fa-check-circle status-icon"></i><div class="lesson-details"><span class="lesson-title">1. Registrando seu Primeiro Gasto</span><span class="lesson-duration">4 min</span></div></li>
+                    <li class="lesson-item completed"><i class="fas fa-check-circle status-icon"></i><div class="lesson-details"><span class="lesson-title">2. Como Verificar seu Saldo</span><span class="lesson-duration">3 min</span></div></li>
+                    <li class="lesson-item completed"><i class="fas fa-check-circle status-icon"></i><div class="lesson-details"><span class="lesson-title">3. Listando e Removendo Gastos</span><span class="lesson-duration">5 min</span></div></li>
+                </ul>
+            </aside>
+        </div>
+    </main>
+    <footer class="footer"><div class="container"><p>&copy; 2025 GerenciaCash. Todos os direitos reservados.</p></div></footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const userMenu = document.getElementById('user-menu');
+            const dropdownMenu = document.getElementById('dropdown-menu');
+            const headerProfilePicture = document.getElementById('header-profile-picture');
+            const dropdownProfilePicture = document.getElementById('dropdown-profile-picture');
+            const profilePictureInputDropdown = document.getElementById('profile-picture-input-dropdown');
+
+            if (userMenu) {
+                userMenu.addEventListener('click', function(event) { event.stopPropagation(); dropdownMenu.classList.toggle('show'); });
+            }
+            window.addEventListener('click', function(event) {
+                if (dropdownMenu && dropdownMenu.classList.contains('show')) {
+                    if (!userMenu.contains(event.target)) { dropdownMenu.classList.remove('show'); }
+                }
+            });
+
+            const savedProfilePicture = localStorage.getItem('profilePicture');
+            if (savedProfilePicture) {
+                headerProfilePicture.src = savedProfilePicture;
+                dropdownProfilePicture.src = savedProfilePicture;
+            }
+
+            if (profilePictureInputDropdown) {
+                profilePictureInputDropdown.addEventListener('change', function(event) {
+                    const file = event.target.files && event.target.files.length > 0 ? event.target.files[0] : null;
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            headerProfilePicture.src = e.target.result;
+                            dropdownProfilePicture.src = e.target.result;
+                            localStorage.setItem('profilePicture', e.target.result);
+                        }
+                        reader.readAsDataURL(file);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

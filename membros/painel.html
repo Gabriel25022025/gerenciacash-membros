@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel - GerenciaCash</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css"> {# Ajustado: style.css está na raiz do repositório #}
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="header">
+            <a href="../" class="logo">GerenciaCash</a> {# Link para a raiz do repositório (onde está login.html) #}
+            <nav class="header-nav">
+                <span>Bem-vindo(a), {{ session['user_name'] }}!</span> {# Isso é para backend (Flask) #}
+                <a href="../login.html">Sair</a> {# Link ajustado #}
+            </nav>
+        </header>
+
+        <main>
+            <h1>Conteúdo Exclusivo - Plano {{ session['user_plan'].capitalize() }}</h1> {# Isso é para backend (Flask) #}
+            <p class="subtitle">Acesse os vídeos abaixo para dominar cada função do seu bot.</p>
+            
+            <div class="aulas-grid">
+                <a href="aulas_boas_vindas.html" class="aula-card"> {# Link ajustado para a pasta membros #}
+                    <img src="https://via.placeholder.com/400x225.png/00d1d1/000000?text=VÍDEO+1" alt="Thumbnail da Aula 1">
+                    <div class="aula-card-content">
+                        <h3>Aula 1: Configurando seu Saldo e Gastos Fixos</h3>
+                        <p>Aprenda a dar o pontapé inicial no seu controle financeiro.</p>
+                    </div>
+                </a>
+                {# Você pode adicionar mais aulas aqui, como as outras aulas_*.html #}
+                </div>
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="container">
+             <p>&copy; 2025 GerenciaCash. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

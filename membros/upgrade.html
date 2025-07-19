@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazer Upgrade - GerenciaCash</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css"> {# Caminho ajustado #}
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="../" class="logo">GerenciaCash</a> {# Link para a raiz do repositório (onde está login.html) #}
+            <a href="index.html" class="btn btn-principal">Voltar aos Módulos</a> {# Link ajustado #}
+        </div>
+    </header>
+    
+    <section class="duration-selection">
+        <div class="container">
+            <h2 id="plan-title">Você está fazendo upgrade para o Plano...</h2>
+            <p id="plan-subtitle" class="subtitle">Carregando detalhes do plano...</p>
+            
+            <div class="duration-container">
+                
+                <div class="duration-card">
+                    <h3>Mensal</h3>
+                    <div id="monthly-price" class="price">R$ 0,00<span>/mês</span></div>
+                    <p id="monthly-total">Cobrança total: R$ 0,00</p>
+                    <a id="monthly-link" href="#" class="btn btn-principal">Assinar Plano Mensal</a>
+                </div>
+
+                <div class="duration-card">
+                    <h3>Trimestral</h3>
+                    <div id="quarterly-price" class="price">R$ 0,00<span>/mês</span></div>
+                    <p id="quarterly-total">Cobrança total: R$ 0,00</p>
+                    <a id="quarterly-link" href="#" class="btn btn-principal">Assinar Plano Trimestral</a>
+                </div>
+
+                <div class="duration-card">
+                    <h3>Semestral</h3>
+                    <div id="semiannual-price" class="price">R$ 0,00<span>/mês</span></div>
+                    <p id="semiannual-total">Cobrança total: R$ 0,00</p>
+                    <a id="semiannual-link" href="#" class="btn btn-principal">Assinar Plano Semestral</a>
+                </div>
+
+                <div class="duration-card">
+                    <h3>Anual</h3>
+                    <div id="annual-price" class="price">R$ 0,00<span>/mês</span></div>
+                    <p id="annual-total">Cobrança total: R$ 0,00</p>
+                    <a id="annual-link" href="#" class="btn btn-principal">Assinar Plano Anual</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 GerenciaCash. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const plansData = {
+                bronze: {
+                    title: "Você está assinando o Plano Bronze 🥉",
+                    subtitle: "O plano essencial para você abandonar o caderninho e começar a organizar suas finanças de forma simples.",
+                    durations: {
+                        monthly:    { price: "R$ 12,90", total: "Cobrança total: R$ 12,90", link: "https://pay.kiwify.com.br/aB5KSzd" },
+                        quarterly:  { price: "R$ 11,90", total: "Cobrança total: R$ 35,70 (Economize ~8%)", link: "https://pay.kiwify.com.br/oTUbbMm" },
+                        semiannual: { price: "R$ 10,90", total: "Cobrança total: R$ 65,40 (Economize ~15%)", link: "https://pay.kiwify.com.br/fT1vY42" },
+                        annual:     { price: "R$ 9,90",  total: "Cobrança total: R$ 118,80 (Economize ~23%)", link: "https://pay.kiwify.com.br/zUTsbea" }
+                    }
+                },
+                prata: {
+                    title: "Você está assinando o Plano Prata 🥈",
+                    subtitle: "O plano ideal para quem quer controle total, com categorias e gestão de contas fixas.",
+                    durations: {
+                        monthly:    { price: "R$ 19,90", total: "Cobrança total: R$ 19,90", link: "https://pay.kiwify.com.br/htaTbst" },
+                        quarterly:  { price: "R$ 17,90", total: "Cobrança total: R$ 53,70 (Economize ~10%)", link: "https://pay.kiwify.com.br/1OVndnY" },
+                        semiannual: { price: "R$ 16,90", total: "Cobrança total: R$ 101,40 (Economize ~15%)", link: "https://pay.kiwify.com.br/zUcZUci" },
+                        annual:     { price: "R$ 15,90", total: "Cobrança total: R$ 190,80 (Economize ~20%)", link: "https://pay.kiwify.com.br/IsAHZlp" }
+                    }
+                },
+                ouro: {
+                    title: "Você está assinando o Plano Ouro 🥇",
+                    subtitle: "Para quem busca maestria. Defina metas, pesquise e otimize cada centavo.",
+                    durations: {
+                        monthly:    { price: "R$ 27,90", total: "Cobrança total: R$ 27,90", link: "https://pay.kiwify.com.br/9QI7T3t" },
+                        quarterly:  { price: "R$ 25,90", total: "Cobrança total: R$ 77,70 (Economize ~7%)", link: "https://pay.kiwify.com.br/P5RjuCp" },
+                        semiannual: { price: "R$ 23,90", total: "Cobrança total: R$ 143,40 (Economize ~14%)", link: "https://pay.kiwify.com.br/QtzSDMb" },
+                        annual:     { price: "R$ 22,90", total: "Cobrança total: R$ 274,80 (Economize ~18%)", link: "https://pay.kiwify.com.br/GeIs1vb" }
+                    }
+                },
+                diamante: {
+                    title: "Você está assinando o Plano Diamante 💎",
+                    subtitle: "A solução definitiva com automação e recursos avançados para total domínio das suas finanças.",
+                    durations: {
+                        monthly:    { price: "R$ 47,90", total: "Cobrança total: R$ 47,90", link: "https://pay.kiwify.com.br/I41HlQf" },
+                        quarterly:  { price: "R$ 44,90", total: "Cobrança total: R$ 134,70 (Economize ~10%)", link: "https://pay.kiwify.com.br/fg9FiJs" },
+                        semiannual: { price: "R$ 42,90", total: "Cobrança total: R$ 257,40 (Economize ~14%)", link: "https://pay.kiwify.com.br/pHZZ9db" },
+                        annual:     { price: "R$ 39,90", total: "Cobrança total: R$ 478,80 (Economize ~20%)", link: "https://pay.kiwify.com.br/mOkoDdh" }
+                    }
+                }
+            };
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const planName = urlParams.get('plano');
+            const selectedPlan = plansData[planName] || plansData.diamante;
+
+            document.getElementById('plan-title').textContent = selectedPlan.title;
+            document.getElementById('plan-subtitle').textContent = selectedPlan.subtitle;
+
+            function updateDurationCard(duration, data) {
+                const priceElement = document.getElementById(`${duration}-price`);
+                const totalElement = document.getElementById(`${duration}-total`);
+                const linkElement = document.getElementById(`${duration}-link`);
+                const periodSpan = priceElement.querySelector('span');
+                
+                priceElement.textContent = ''; 
+                priceElement.appendChild(document.createTextNode(data.price));
+                priceElement.appendChild(periodSpan);
+
+                totalElement.textContent = data.total;
+                linkElement.href = data.link;
+            }
+
+            updateDurationCard('monthly', selectedPlan.durations.monthly);
+            updateDurationCard('quarterly', selectedPlan.durations.quarterly);
+            updateDurationCard('semiannual', selectedPlan.durations.semiannual);
+            updateDurationCard('annual', selectedPlan.durations.annual);
+        });
+    </script>
+
+</body>
+</html>

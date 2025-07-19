@@ -1,0 +1,1299 @@
+/* --- TEMA DE CORES: PRETO, BRANCO E CIANO --- */
+:root {
+    --cor-ciano: #00d1d1;
+    --cor-fundo-escuro: #121212;
+    --cor-cartao: #1e1e1e;
+    --cor-texto-branco: #f0f0f0;
+    --cor-texto-cinza: #a0a0a0;
+    --cor-borda: #333333;
+}
+
+/* --- ESTILOS GERAIS --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: var(--cor-fundo-escuro);
+    color: var(--cor-texto-branco);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+section {
+    padding: 100px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--cor-borda);
+}
+h1, h2, h3, h4 {
+    font-weight: 700;
+    line-height: 1.3;
+}
+h2 {
+    font-size: 38px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+p {
+    color: var(--cor-texto-cinza);
+    font-size: 16px;
+}
+.subtitle {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+}
+
+/* --- ANIMAÇÕES DE SCROLL --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.delay-1 { transition-delay: 200ms; }
+.delay-2 { transition-delay: 400ms; }
+.delay-3 { transition-delay: 600ms; }
+
+/* --- CABEÇALHO --- */
+.header {
+    background-color: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 20px 0;
+    border-bottom: 1px solid var(--cor-borda);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.header .container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 24px; font-weight: 700; color: var(--cor-ciano); }
+.logo:hover { text-decoration: none; color: var(--cor-ciano); } /* Para link de logo */
+
+/* --- BOTÕES --- */
+.btn { display: inline-block; padding: 12px 28px; border-radius: 30px; text-decoration: none; font-weight: 700; transition: transform 0.2s, box-shadow 0.2s; }
+.btn-principal { background-color: var(--cor-ciano); color: #000; }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0, 209, 209, 0.2); }
+
+/* --- SEÇÃO HERO (TOPO) --- */
+.hero { padding: 120px 0; border-bottom: 0; }
+.hero h1 { font-size: 52px; max-width: 800px; margin: 0 auto 20px auto; }
+.gradient-text {
+    background: linear-gradient(90deg, #00d1d1, #007bff);
+    -webkit-background-clip: text;
+    background-clip: text; /* Propriedade padrão adicionada */
+    -webkit-text-fill-color: transparent;
+}
+.hero p { font-size: 20px; max-width: 600px; margin: 0 auto 40px auto; }
+
+/* --- SEÇÃO COMO FUNCIONA --- */
+.how-it-works { background-color: var(--cor-cartao); }
+.steps-container { display: flex; justify-content: space-around; gap: 30px; margin-top: 60px; }
+.step { max-width: 300px; }
+.step-icon { font-size: 40px; color: var(--cor-ciano); margin-bottom: 20px; }
+.step h3 { font-size: 22px; }
+
+/* --- SEÇÃO DE PLANOS --- */
+.pricing-container { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.plan-card { background-color: var(--cor-cartao); border: 1px solid var(--cor-borda); border-radius: 15px; padding: 30px; width: 250px; text-align: left; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+.plan-card:hover { transform: translateY(-10px); box-shadow: 0 12px 40px rgba(0, 209, 209, 0.2); }
+.plan-card.popular { border-color: var(--cor-ciano); border-width: 2px; position: relative; }
+.popular-badge { background-color: var(--cor-ciano); color: black; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); }
+.plan-card h3 { font-size: 28px; margin-top: 0; color: var(--cor-ciano); }
+.plan-card .price { font-size: 32px; font-weight: 700; margin: 20px 0; }
+.plan-card .price span { font-size: 16px; font-weight: 400; color: var(--cor-texto-cinza); }
+.plan-card .plan-description { font-size: 14px; min-height: 60px; }
+.plan-card ul { list-style: none; padding: 0; margin: 30px 0; flex-grow: 1; }
+.plan-card li { margin-bottom: 15px; display: flex; align-items: flex-start; }
+.plan-card li .fa-check { margin-right: 10px; color: var(--cor-ciano); margin-top: 5px;}
+.plan-card .btn { width: 100%; text-align: center; box-sizing: border-box; }
+
+/* --- SEÇÃO DEPOIMENTOS --- */
+.testimonials { background-color: var(--cor-cartao); }
+.testimonials-grid { display: flex; justify-content: center; gap: 30px; margin-top: 60px; flex-wrap: wrap; }
+.testimonial-card { background-color: var(--cor-fundo-escuro); border: 1px solid var(--cor-borda); border-radius: 10px; padding: 30px; max-width: 300px; }
+.testimonial-card p { font-style: italic; color: var(--cor-texto-cinza); }
+.testimonial-card .author { font-weight: 700; margin-top: 20px; color: var(--cor-texto-branco); }
+
+/* --- FAQ --- */
+.faq-item { max-width: 700px; margin: 0 auto 20px auto; text-align: left; border-bottom: 1px solid var(--cor-borda); padding-bottom: 15px; }
+.faq-item h4 { margin: 0 0 10px 0; font-size: 18px; color: var(--cor-texto-branco); }
+
+/* --- FOOTER --- */
+.footer { background-color: #1a1a1a; color: var(--cor-texto-cinza); padding: 40px 0; text-align: center; border-top: 1px solid var(--cor-borda); }
+.footer a { color: var(--cor-ciano); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+
+/* --- RESPONSIVO --- */
+@media (max-width: 1120px) { .pricing-container { max-width: 600px; margin: 0 auto; } }
+@media (max-width: 992px) { .steps-container { flex-direction: column; align-items: center; } .step { margin-bottom: 40px; } }
+@media (max-width: 768px) { .hero h1 { font-size: 36px; } .hero p { font-size: 16px; } h2 { font-size: 28px; } }
+
+/* --- SEÇÃO DE DURAÇÃO DE PLANOS --- */
+.duration-selection { padding: 80px 0; }
+.duration-container { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 40px; }
+.duration-card { background-color: var(--cor-cartao); border: 1px solid var(--cor-borda); border-radius: 15px; padding: 30px; width: 250px; text-align: center; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); transition: transform 0.3s, box-shadow 0.3s; }
+.duration-card:hover { transform: translateY(-10px); box-shadow: 0 12px 40px rgba(0, 209, 209, 0.2); }
+.duration-card.popular { border-color: var(--cor-ciano); border-width: 2px; position: relative; }
+.duration-card h3 { font-size: 24px; margin-top: 0; }
+.duration-card .price { font-size: 28px; font-weight: 700; color: var(--cor-ciano); }
+.duration-card .price span { font-size: 16px; font-weight: 400; color: var(--cor-texto-cinza); }
+.duration-card p { margin: 10px 0 25px 0; font-size: 14px; }
+
+
+/* --- ESTILOS PARA PÁGINA DE LOGIN --- */
+.login-section { padding: 80px 0; min-height: 70vh; display: flex; align-items: center; justify-content: center; }
+.login-card { background-color: var(--cor-cartao); border: 1px solid var(--cor-borda); border-radius: 15px; padding: 40px; max-width: 450px; margin: 0 auto; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); }
+.login-card h2 { margin-bottom: 10px; }
+.form-group { margin-bottom: 25px; text-align: left; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--cor-texto-cinza); }
+.form-group input { width: 100%; padding: 14px; background-color: var(--cor-fundo-escuro); border: 1px solid var(--cor-borda); border-radius: 8px; color: var(--cor-texto-branco); font-size: 16px; box-sizing: border-box; transition: border-color 0.3s, box-shadow 0.3s; }
+.form-group input::placeholder { color: #555; }
+.form-group input:focus { outline: none; border-color: var(--cor-ciano); box-shadow: 0 0 0 4px rgba(0, 209, 209, 0.15); }
+.login-card .btn { width: 100%; padding: 15px; font-size: 16px; margin-top: 10px; }
+
+
+/* --- ESTILOS ADICIONAIS PARA ÁREA DE MEMBROS (Layout Kiwify) --- */
+
+/* --- Página Principal de Módulos (membros.html) --- */
+
+.modules-section {
+    padding: 80px 0;
+    border: none;
+}
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+.module-card {
+    background-color: var(--cor-cartao);
+    border: 1px solid var(--cor-borda);
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.module-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+.module-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+.module-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: left;
+}
+.module-tag {
+    background-color: var(--cor-ciano);
+    color: #000;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    align-self: flex-start;
+    margin-bottom: 15px;
+}
+/* Cores das tags de plano */
+.module-tag.bronze { background-color: #cd7f32; color: #fff; }
+.module-tag.prata { background-color: #c0c0c0; color: #000; }
+.module-tag.ouro { background-color: #ffd700; color: #000; }
+.module-tag.diamante { background-color: var(--cor-ciano); color: #000; }
+
+.module-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+    color: var(--cor-texto-branco);
+}
+.module-content p {
+    font-size: 15px;
+    margin: 0 0 25px 0;
+    flex-grow: 1;
+}
+.module-progress span {
+    font-size: 13px;
+    color: var(--cor-texto-cinza);
+    margin-top: 8px;
+    display: block;
+}
+.progress-bar-container {
+    width: 100%;
+    height: 8px;
+    background-color: var(--cor-fundo-escuro);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.progress-bar-fill {
+    height: 100%;
+    background-color: var(--cor-ciano);
+    border-radius: 10px;
+}
+.module-content .btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* --- Página de Aulas (aulas_boas_vindas.html) --- */
+.classroom-main {
+    padding: 40px 0;
+}
+.classroom-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 30px;
+}
+.video-player-area {
+    flex-grow: 1;
+    min-width: 0;
+}
+.video-player-wrapper {
+    position: relative;
+    width: 100%;
+    background-color: #000;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid var(--cor-borda);
+}
+.video-lesson-info {
+    padding: 25px 10px;
+    text-align: left;
+}
+.video-lesson-info h2 {
+    margin: 5px 0 10px 0;
+}
+.video-navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-top: 1px solid var(--cor-borda);
+    border-bottom: 1px solid var(--cor-borda);
+}
+.video-navigation .btn-secondary {
+    background-color: var(--cor-cartao);
+    color: var(--cor-texto-branco);
+}
+.video-navigation .btn.disabled {
+    background-color: #222;
+    color: #555;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+.lesson-playlist-area {
+    width: 380px;
+    flex-shrink: 0;
+    background-color: var(--cor-cartao);
+    border-radius: 15px;
+    border: 1px solid var(--cor-borda);
+    height: fit-content;
+}
+.playlist-header {
+    padding: 20px;
+    border-bottom: 1px solid var(--cor-borda);
+}
+.playlist-header h4 {
+    margin: 0;
+    font-size: 18px;
+}
+.lesson-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.lesson-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border-bottom: 1px solid var(--cor-borda);
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-align: left;
+}
+.lesson-item:last-child {
+    border-bottom: none;
+}
+.lesson-item:hover {
+    background-color: #2a2a2a;
+}
+.lesson-item.active {
+    background-color: var(--cor-fundo-escuro);
+}
+.lesson-item .status-icon {
+    font-size: 20px;
+    width: 20px; /* Alinhamento */
+    text-align: center;
+    color: var(--cor-texto-cinza);
+}
+.lesson-item.active .status-icon { color: var(--cor-ciano); }
+.lesson-item.completed .status-icon { color: var(--cor-ciano); }
+.lesson-item.locked .status-icon { color: #666; }
+.lesson-details {
+    display: flex;
+    flex-direction: column;
+}
+.lesson-title {
+    font-weight: 600;
+    color: var(--cor-texto-branco);
+}
+.lesson-duration {
+    font-size: 13px;
+    color: var(--cor-texto-cinza);
+}
+
+/* Responsividade da Página de Aulas */
+@media (max-width: 1200px) {
+    .classroom-container {
+        flex-direction: column;
+    }
+    .lesson-playlist-area {
+        width: 100%;
+    }
+}
+
+/* --- ESTILOS PARA SEÇÃO DE MÓDULOS POR PLANO --- */
+
+.plan-modules-separator {
+    text-align: center;
+    margin: 80px 0 40px 0;
+    border-top: 1px solid var(--cor-borda);
+    padding-top: 60px;
+}
+
+.plan-modules-separator h2 {
+    font-size: 32px;
+}
+
+.plan-modules-separator p {
+    color: var(--cor-texto-cinza);
+    max-width: 500px;
+    margin: 10px auto 0 auto;
+}
+
+/* --- ESTILOS PARA RECURSOS E CONTROLO DE ACESSO --- */
+
+/* --- Card de Download de Recurso --- */
+.resource-section {
+    padding: 0;
+    margin-top: -40px; /* Puxa para mais perto do hero */
+    margin-bottom: 60px;
+    border: none;
+}
+.resource-card {
+    background-color: var(--cor-cartao);
+    border: 1px solid var(--cor-borda);
+    border-radius: 15px;
+    padding: 25px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.resource-icon {
+    font-size: 40px;
+    color: var(--cor-ciano);
+}
+.resource-content {
+    flex-grow: 1;
+    text-align: left;
+}
+.resource-content h3 {
+    margin: 0 0 5px 0;
+    color: var(--cor-texto-branco);
+}
+.resource-content p {
+    margin: 0;
+    font-size: 15px;
+}
+.btn-secondary {
+    background-color: #2a2a2a;
+    color: var(--cor-texto-branco);
+}
+.btn-secondary:hover {
+    background-color: #333;
+    color: var(--cor-ciano);
+}
+
+/* --- Estilos para Módulos Bloqueados --- */
+.module-image-wrapper {
+    position: relative;
+}
+.module-card.locked .module-image {
+    filter: grayscale(90%) brightness(0.4);
+}
+.lock-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.module-card.locked:hover .lock-overlay {
+    opacity: 1;
+}
+.lock-overlay .fa-lock {
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.lock-overlay span {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Botão Desativado */
+.btn.disabled {
+    background-color: #2a2a2a;
+    color: #666;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+.btn.disabled:hover {
+    transform: none;
+    box-shadow: none;
+    color: #666;
+}
+
+/* --- ESTILO PARA SEPARADOR NA PLAYLIST DE AULAS --- */
+
+.playlist-subheader {
+    padding: 15px 20px 8px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--cor-texto-cinza);
+    background-color: var(--cor-fundo-escuro);
+    border-bottom: 1px solid var(--cor-borda);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* --- ESTILOS PARA A SECÇÃO DE COMENTÁRIOS --- */
+
+.comments-section {
+    padding: 25px 10px;
+    margin-top: 20px;
+    border-top: 1px solid var(--cor-borda);
+    text-align: left;
+}
+.comments-section h4 {
+    font-size: 18px;
+    margin: 0 0 20px 0;
+    color: var(--cor-texto-branco);
+}
+.comments-section h4 .fa-comments {
+    margin-right: 10px;
+    color: var(--cor-ciano);
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+.comment-form textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 14px;
+    background-color: var(--cor-fundo-escuro);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    color: var(--cor-texto-branco);
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    resize: vertical;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.comment-form textarea:focus {
+    outline: none;
+    border-color: var(--cor-ciano);
+    box-shadow: 0 0 0 4px rgba(0, 209, 209, 0.15);
+}
+.comment-form button {
+    align-self: flex-end; /* Alinha o botão à direita */
+    width: auto;
+    padding: 10px 25px;
+}
+
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.comment-item {
+    background-color: var(--cor-cartao);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--cor-borda);
+}
+.comment-author {
+    font-weight: 700;
+    color: var(--cor-texto-branco);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.comment-author .fa-user-circle {
+    color: var(--cor-ciano);
+    font-size: 20px;
+}
+.comment-text {
+    color: var(--cor-texto-cinza);
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+.comment-date {
+    font-size: 12px;
+    color: #666;
+}
+
+/* --- ESTILOS PARA O MENU DROPDOWN DO PERFIL --- */
+
+.user-menu {
+    position: relative; /* Essencial para o posicionamento do dropdown */
+    cursor: pointer;
+}
+
+.user-menu-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.user-menu:hover .user-menu-toggle {
+    background-color: var(--cor-cartao);
+}
+
+.dropdown-menu {
+    display: none; /* Escondido por padrão */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 10px;
+    background-color: var(--cor-cartao);
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    width: 280px;
+    z-index: 1001;
+    overflow: hidden;
+}
+
+.dropdown-menu.show {
+    display: block; /* Mostra o menu quando a classe .show é adicionada */
+}
+
+.dropdown-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--cor-borda);
+    text-align: center; /* Centraliza o conteúdo do cabeçalho do dropdown */
+}
+
+.dropdown-header .user-name {
+    font-weight: 700;
+    color: var(--cor-texto-branco);
+    margin: 0;
+}
+
+.dropdown-header .user-plan {
+    font-size: 14px;
+    color: var(--cor-ciano);
+    margin: 5px 0 0 0;
+}
+
+.dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: var(--cor-texto-cinza);
+    font-size: 15px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #2a2a2a;
+    color: var(--cor-texto-branco);
+}
+
+.dropdown-menu a i {
+    width: 20px; /* Alinha os ícones */
+    text-align: center;
+}
+
+.dropdown-divider {
+    height: 1px;
+    background-color: var(--cor-borda);
+    margin: 5px 0;
+}
+
+/* --- ESTILOS PARA FOTO DE PERFIL NO HEADER E DROPDOWN (NOVO) --- */
+.profile-picture-header {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid var(--cor-borda); /* Adiciona borda sutil */
+}
+
+.profile-picture-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-picture-dropdown {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 10px; /* Centraliza no dropdown */
+    border: 2px solid var(--cor-ciano); /* Borda destacada */
+}
+
+.profile-picture-dropdown img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.change-picture-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 0.8em;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex; /* Para centralizar ícone e texto */
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.profile-picture-dropdown:hover .change-picture-label {
+    opacity: 1;
+}
+
+/* --- ESTILOS PARA PÁGINAS DA CONTA, ASSINATURA E CONQUISTAS --- */
+
+/* Título Padrão da Página */
+.page-title-section {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--cor-borda);
+    background-color: var(--cor-cartao);
+}
+.page-title-section h2 {
+    font-size: 32px;
+}
+.page-title-section h2 .fas {
+    color: var(--cor-ciano);
+    margin-right: 15px;
+}
+
+/* Página "Minha Conta" */
+.account-section {
+    padding: 80px 0;
+    border: none;
+}
+.account-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--cor-cartao);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid var(--cor-borda);
+}
+.account-form-container h3 {
+    text-align: left;
+    margin-bottom: 25px;
+    color: var(--cor-texto-branco);
+}
+.form-divider {
+    margin-top: 40px;
+    padding-top: 25px;
+    border-top: 1px solid var(--cor-borda);
+}
+
+/* Página "Gerir Assinatura" */
+.subscription-section {
+    padding: 80px 0;
+    border: none;
+}
+.subscription-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.current-plan-card, .upgrade-options {
+    background-color: var(--cor-cartao);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid var(--cor-borda);
+    text-align: left;
+}
+.current-plan-card h3, .upgrade-options h3 {
+    margin-top: 0;
+    color: var(--cor-texto-branco);
+}
+.plan-name {
+    font-size: 24px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+}
+.plan-name.diamante { color: var(--cor-ciano); }
+.renewal-info {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: var(--cor-fundo-escuro);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.renewal-info .fas {
+    color: var(--cor-ciano);
+}
+.plan-card-horizontal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.btn-small {
+    padding: 8px 15px; /* Reduz o preenchimento interno */
+    font-size: 0.9em; /* Reduz o tamanho da fonte */
+}
+
+/* Página "Minhas Conquistas" */
+.achievements-section {
+    padding: 80px 0;
+    border: none;
+}
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+.achievement-card {
+    background-color: var(--cor-cartao);
+    border: 1px solid var(--cor-borda);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    opacity: 0.5;
+    filter: grayscale(80%);
+}
+.achievement-card.earned {
+    opacity: 1;
+    filter: grayscale(0);
+    border-color: var(--cor-ciano);
+}
+.achievement-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: var(--cor-texto-cinza);
+}
+.achievement-card.earned .achievement-icon {
+    color: var(--cor-ciano);
+}
+.achievement-card h3 {
+    margin: 0 0 10px 0;
+    color: var(--cor-texto-branco);
+}
+.achievement-card p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .subscription-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- ESTILOS PARA SISTEMA DE XP E RANK --- */
+
+/* Medidor de XP no Cabeçalho */
+.xp-rank-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: 20px;
+}
+.xp-rank-header .rank-icon {
+    font-size: 24px;
+    color: var(--cor-ciano);
+}
+.xp-details {
+    width: auto; /* Remove a largura fixa para maior flexibilidade */
+}
+/* Alinha o nome e os pontos lado a lado */
+.rank-header-info {
+    display: flex;
+    align-items: baseline; /* Alinha pela base do texto */
+    gap: 8px;
+    margin-bottom: 5px;
+}
+.xp-details .rank-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cor-texto-branco);
+    margin: 0;
+    white-space: nowrap; /* Impede que o nome quebre a linha */
+}
+.xp-details .rank-points-text {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cor-texto-cinza);
+    white-space: nowrap; /* Impede que os pontos quebrem a linha */
+}
+.header-xp-bar-container {
+    width: 150px; /* Aumenta o tamanho da barra */
+    height: 6px;
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #333;
+}
+.header-xp-bar-fill {
+    height: 100%;
+    background-color: var(--cor-ciano);
+    border-radius: 5px;
+}
+
+/* Página "Meu Progresso" (Estilos inalterados, mas incluídos para manter o bloco completo) */
+.progress-section {
+    padding: 60px 0;
+    border: none;
+}
+.progress-container {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.main-progress-card {
+    background-color: var(--cor-cartao);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid var(--cor-borda);
+}
+.current-rank-display {
+    text-align: center;
+    border-bottom: 1px solid var(--cor-borda);
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+.current-rank-display .rank-icon {
+    font-size: 50px;
+    color: var(--cor-ciano);
+    margin-bottom: 15px;
+}
+.current-rank-display h3 {
+    margin: 0 0 5px 0;
+    font-size: 28px;
+    color: var(--cor-texto-branco);
+}
+.current-rank-display p {
+    margin: 0;
+    color: var(--cor-texto-cinza);
+}
+.main-xp-bar-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.main-xp-bar-container {
+    width: 100%;
+    height: 12px;
+    background-color: var(--cor-fundo-escuro);
+    border-radius: 10px;
+}
+.main-xp-bar-fill {
+    height: 100%;
+    background-color: var(--cor-ciano);
+    border-radius: 10px;
+}
+
+/* Histórico de XP */
+.xp-history-card, .all-ranks-card {
+    background-color: var(--cor-cartao);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid var(--cor-borda);
+}
+.xp-history-card h4, .all-ranks-card h4 {
+    margin: 0 0 20px 0;
+}
+.xp-history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 400px;
+    overflow-y: auto;
+}
+.xp-history-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--cor-borda);
+}
+.xp-history-item:last-child { border-bottom: none; }
+.xp-history-item .xp-value {
+    font-weight: 700;
+    color: var(--cor-ciano);
+}
+
+/* Lista de Ranks */
+.all-ranks-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.rank-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+}
+.rank-item .rank-icon {
+    font-size: 20px;
+    color: var(--cor-texto-cinza);
+    width: 30px;
+    text-align: center;
+}
+.rank-item.unlocked .rank-icon {
+    color: var(--cor-ciano);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .progress-container {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 768px) {
+    .xp-rank-header {
+        display: none; /* Esconde no cabeçalho em telas pequenas */
+    }
+}
+
+/* --- ESTILOS PARA FILTROS DE CONQUISTAS --- */
+
+.achievements-controls {
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+    padding: 20px;
+    background-color: var(--cor-cartao);
+    border-radius: 15px;
+    border: 1px solid var(--cor-borda);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.filter-buttons button {
+    font-family: 'Poppins', sans-serif;
+    background-color: transparent;
+    border: 1px solid var(--cor-borda);
+    color: var(--cor-texto-cinza);
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.filter-buttons button:hover {
+    background-color: #2a2a2a;
+    color: var(--cor-texto-branco);
+}
+
+.filter-buttons button.active {
+    background-color: var(--cor-ciano);
+    color: #000;
+    border-color: var(--cor-ciano);
+}
+
+.sort-options select {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo-escuro);
+    border: 1px solid var(--cor-borda);
+    color: var(--cor-texto-branco);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* --- ESTILOS PARA A SECÇÃO "CONTINUAR A ASSISTIR" --- */
+
+.continue-watching-section {
+    padding: 0;
+    margin-top: -40px; /* Puxa a secção para mais perto do topo */
+    margin-bottom: 60px;
+    border: none;
+}
+
+.continue-watching-card {
+    background: linear-gradient(to right, #252525, var(--cor-cartao));
+    border: 1px solid var(--cor-borda);
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.continue-watching-thumbnail {
+    flex-shrink: 0;
+}
+
+.continue-watching-thumbnail img {
+    width: 200px;
+    height: 112px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--cor-borda);
+}
+
+.continue-watching-content {
+    text-align: left;
+    flex-grow: 1;
+}
+
+.continue-watching-content .subtitle-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--cor-ciano);
+    margin: 0 0 5px 0;
+}
+
+.continue-watching-content h3 {
+    margin: 0 0 15px 0;
+    font-size: 22px;
+    color: var(--cor-texto-branco);
+}
+
+.continue-watching-content .progress-bar-container {
+    max-width: 300px; /* Limita a largura da barra */
+}
+
+.continue-watching-content .btn {
+    margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .continue-watching-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .continue-watching-content {
+        text-align: center;
+        width: 100%;
+    }
+    .continue-watching-content .progress-bar-container {
+        margin: 0 auto;
+    }
+}
+
+/* --- ESTILOS PARA NOVA SECÇÃO HERO V2 --- */
+.hero-membros-v2 {
+    position: relative;
+    padding: 80px 0;
+    color: var(--cor-texto-branco);
+    overflow: hidden;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1553729459-efe14ef6055d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZmluYW5jZXMsIGJ1ZGdldHx8fHx8fDE3MTYxMjY1MjE&ixlib=rb-4.0.3&q=80&w=1080');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.hero-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(18, 18, 18, 0.95) 50%, rgba(18, 18, 18, 0.7) 100%);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-text {
+    text-align: left;
+    max-width: 60%;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 40px;
+    background-color: rgba(30, 30, 30, 0.7);
+    padding: 20px 30px;
+    border-radius: 15px;
+    border: 1px solid var(--cor-borda);
+    backdrop-filter: blur(5px);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--cor-ciano);
+}
+
+.stat-value.rank {
+    font-size: 18px;
+    color: var(--cor-texto-branco);
+}
+
+.stat-label {
+    display: block;
+    font-size: 14px;
+    color: var(--cor-texto-cinza);
+}
+
+@media (max-width: 992px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .hero-text .subtitle {
+        text-align: center;
+        margin: 0 auto 30px auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero-stats {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+    .hero-text h1 {
+        font-size: 32px;
+    }
+}
+
+/* --- ESTILOS PARA FOTO DE PERFIL (PÁGINA MINHA CONTA) --- */
+
+.profile-picture-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+#profile-picture-preview {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--cor-borda);
+    object-fit: cover;
+    background-color: var(--cor-fundo-escuro);
+}
+
+#change-picture-label {
+    margin-top: 15px;
+    color: var(--cor-ciano);
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+#change-picture-label:hover {
+    color: var(--cor-texto-branco);
+}
+
+/* Esconde o input de arquivo padrão */
+#profile-picture-input {
+    display: none;
+}
