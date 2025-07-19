@@ -7,14 +7,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> {# Ajustado para o style.css na raiz #}
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="header">
         <div class="container">
-            <a href="index.html" class="logo">GerenciaCash</a> {# Link para a página de vendas, na raiz do repositório de vendas #}
-            <a href="index.html" class="btn btn-principal">Voltar ao Início</a> {# Link para a página de vendas #}
+            <a href="index.html" class="logo">GerenciaCash</a>
+            <a href="index.html" class="btn btn-principal">Voltar ao Início</a>
         </div>
     </header>
     
@@ -22,18 +22,16 @@
         <div class="container">
             
             <div class="login-card">
-                <h2>Acesse sua Área de Membros</h2> {# Título conforme a imagem #}
+                <h2>Acesse sua Área de Membros</h2>
                 <p class="subtitle" style="margin-bottom: 40px;">Use os dados fornecidos no momento da sua assinatura.</p>
-                
-                {# REMOVIDO: {% if error %} {{ error }} {% endif %} #}
                 
                 <form id="login-form">
                     <div class="form-group">
-                        <label for="email">Seu E-mail de Acesso</label> {# Texto da label conforme a imagem #}
+                        <label for="email">Seu E-mail de Acesso</label>
                         <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
                     </div>
                     <div class="form-group">
-                        <label for="senha">Sua Senha</label> {# Texto da label conforme a imagem #}
+                        <label for="senha">Sua Senha</label>
                         <input type="password" id="senha" name="senha" placeholder="Sua senha provisória" required>
                     </div>
                     <button type="submit" class="btn btn-principal">Entrar</button>
