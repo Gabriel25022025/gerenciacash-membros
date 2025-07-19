@@ -3,38 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Área de Membros GerenciaCash</title>
+    <title>Login - Área de Membros - GerenciaCash</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> {# Ajustado para o style.css na raiz #}
 </head>
 <body>
-    <div class="container">
-        <div class="login-container">
-            <a href="https://seuusuario.github.io/" class="logo">GerenciaCash</a>
-            <h2>Acesse sua Área de Membros</h2>
 
-            {% if error %}
-                <p class="error-message">{{ error }}</p>
-            {% endif %}
-            
-            <form method="post">
-                <div class="form-group">
-                    <label for="email">Seu E-mail de Acesso</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Sua Senha</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <button type="submit" class="btn btn-login">Entrar</button>
-            </form>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">GerenciaCash</a> {# Link para a página de vendas, na raiz do repositório de vendas #}
+            <a href="index.html" class="btn btn-principal">Voltar ao Início</a> {# Link para a página de vendas #}
         </div>
-    </div>
+    </header>
+    
+    <section class="login-section">
+        <div class="container">
+            
+            <div class="login-card">
+                <h2>Acesse sua Área de Membros</h2> {# Título conforme a imagem #}
+                <p class="subtitle" style="margin-bottom: 40px;">Use os dados fornecidos no momento da sua assinatura.</p>
+                
+                {# REMOVIDO: {% if error %} {{ error }} {% endif %} #}
+                
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="email">Seu E-mail de Acesso</label> {# Texto da label conforme a imagem #}
+                        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="senha">Sua Senha</label> {# Texto da label conforme a imagem #}
+                        <input type="password" id="senha" name="senha" placeholder="Sua senha provisória" required>
+                    </div>
+                    <button type="submit" class="btn btn-principal">Entrar</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 GerenciaCash. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    {# Script para redirecionamento após login (simulado) #}
     <script>
-        document.querySelector('.btn-login').addEventListener('click', function(event) {
+        document.getElementById('login-form').addEventListener('submit', function(event) {
             event.preventDefault(); // Impede o envio padrão do formulário
-            // Para um protótipo estático, apenas redireciona após um "login" simulado
-            window.location.href = 'membros/'; // Redireciona para a pasta membros
+            // Aqui você pode adicionar uma validação simples se quiser
+            // Por exemplo, verificar se os campos não estão vazios
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+
+            if (email && senha) {
+                // Redireciona para a página principal da área de membros
+                window.location.href = 'membros/'; // Aponta para a pasta membros
+            } else {
+                alert('Por favor, preencha todos os campos.');
+            }
         });
     </script>
 </body>
